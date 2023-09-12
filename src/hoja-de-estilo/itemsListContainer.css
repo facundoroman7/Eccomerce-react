@@ -3,3 +3,21 @@
     margin: 20px;
     font-size: 30PX;
 }
+
+.producto-tarjeta{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin: 40px;
+
+}
+
+.Contador-de-productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 25px;
+    background-color: lightskyblue;;
+}
+

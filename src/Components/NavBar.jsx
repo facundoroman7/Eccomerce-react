@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom'
 import '../hoja-de-estilo/NavBar.css'
-import imgLogo from '../imagenes/list-logo-1.png'
+import imgLogo from '../imagenes/libro.png'
 import CartWidget from './CartWidget'
 import {
   Menu,
@@ -9,19 +10,23 @@ import {
 } from '@chakra-ui/react'
 
 
+
 const NavBar = () => {
   return (
     <header>
       <nav className='navbar'>
         <div className='logo'>
-          <img src={imgLogo} alt="logo de la pagina" className='img-logo' />
+          <Link to="/">
+            <img src={imgLogo} alt="logo de la pagina" className='img-logo' />
+          </Link>
+          
         </div>
         <ul className='links'>
           <li>Inicio</li>
           <li>Envios</li>
           <Menu >
             <MenuButton className='link-dropdown'>
-              libros
+            <i className="bi bi-caret-down">libros</i>
             </MenuButton>
             <MenuList>
               <MenuItem color="black">Libro 1</MenuItem>
@@ -35,7 +40,7 @@ const NavBar = () => {
 
         <CartWidget />
       </nav>
-
+      
     </header>
   )
 }
